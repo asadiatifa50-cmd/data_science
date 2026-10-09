@@ -1,0 +1,21 @@
+readings = [21.5, None, 24.0, 31.2, -4.0, 28.5, None, 35.1] 
+
+clean_reading =[]
+for value in readings:
+    if value is None: 
+        continue
+    if value <0 or value >50:
+        continue
+
+    clean_reading.append(value)
+
+average= sum(clean_reading)/ len (clean_reading)
+
+alerts=[]
+for value in clean_reading:
+    if value > 30:
+        alerts .append(value)
+
+print ("clean reading:", clean_reading)
+print (" average:", round (average,2))
+print ("alerts:", alerts) 
