@@ -1,0 +1,31 @@
+marks = [88, 74, 93, -5, 61, 47, 105, 82, 59] 
+valid_marks=[]
+
+for mark in marks: 
+    if mark<0 or mark>100: 
+        continue
+    valid_marks .append (mark)
+
+A=[]
+B=[]
+C=[]
+F=[]
+for mark in valid_marks:
+    if mark>=80:
+        A.append(mark)
+    elif mark>=70 :
+        B.append(mark)
+    elif mark>=60 :
+        C.append(mark)
+    else:
+        F.append(mark)
+
+average= sum(valid_marks)/len(valid_marks)
+Highest= max(valid_marks)
+lowest= min (valid_marks)
+
+print ("valid marks:", valid_marks)
+print (f"grad count: A={len(A)}, B={len(B)}, C={len(C)}, F={len(F)}")
+print ("Average:", round(average,2))
+print ("Highest:", Highest, )
+print ("lowest:", lowest)
